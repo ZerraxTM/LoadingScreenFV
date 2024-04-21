@@ -1,0 +1,132 @@
+<!--
+_______                   __                  ________ 
+/       \                 /  |                /        |
+$$$$$$$  | __    __       $$ |        ______  $$$$$$$$/ 
+$$ |__$$ |/  |  /  |      $$ |       /      \     /$$/  
+$$    $$< $$ |  $$ |      $$ |      /$$$$$$  |   /$$/   
+$$$$$$$  |$$ |  $$ |      $$ |      $$    $$ |  /$$/    
+$$ |__$$ |$$ \__$$ |      $$ |_____ $$$$$$$$/  /$$/____ 
+$$    $$/ $$    $$ |      $$       |$$       |/$$      |
+$$$$$$$/   $$$$$$$ |      $$$$$$$$/  $$$$$$$/ $$$$$$$$/ 
+          /  \__$$ |                                    
+          $$    $$/                                     
+           $$$$$$/                                      
+-->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction</title>
+<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+</head> 
+<body>
+    <video autoplay loop id="bg-video">
+        <source src="./assets/video/zelda.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Background Image -->
+    <div id="background">
+      <svg class="rectangle_background">
+        <rect id="background_rect" rx="0" ry="0" width="11200" height="350"></rect>
+      </svg>
+    </div> 
+    
+    <!-- Logo -->
+    <img id="logo" src="./assets/img/dracorp.png" >
+    
+    <!-- Infos -->
+    <div id="infos">
+      <!-- Discord Info -->
+      <div id="discordInfo">
+        <div class="group2">
+          <svg class="rectangle_info">
+            <rect id="info_rect" rx="6" ry="6" width="287" height="59"></rect>
+          </svg>
+          <img id="discord_icon" src="./assets/img/discord.png">
+          <div id="discord_link">
+            <span>dsc.gg</span><span style="color:rgb(213, 220, 13);">/draco</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Site Web Info -->
+      <div id="websiteInfo">
+        <div id="group">
+          <svg class="rectangle_info">
+            <rect id="info_rect" rx="6" ry="6" width="287" height="59"></rect>
+          </svg>
+          <div id="website_link">
+            <span>Ste Web : </span><span style="color:rgb(213, 220, 13);">draco.fr</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Update Info -->
+      <div id="updateInfo">
+        <svg class="rectangle_info">
+          <rect id="info_rect" rx="6" ry="6" width="300" height="550"></rect>
+        </svg>
+        <div id="update">
+          <div style="text-align: center;">
+            <span style="color:rgb(223, 230, 6); display: block;">Nouveautés</span>
+          </div>
+        </div>
+        <div id="update_details" style="margin-top: 10px;">
+          <hr style="border-top: 2px solid #cccccc; width: 50px; margin: 0 auto; margin-bottom: 20px;">
+        </div>
+      </div>
+      
+              
+      
+      <!-- WEB Icon -->
+      <img id="web_icon" src="./assets/img/web.png">
+    </div>
+    
+    <!-- Loading Animation -->
+    <div class="loading-animation">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    
+    <!-- Main Text -->
+    <div class="centered-text">
+      <div class="game-load-text">
+        DRACO RP
+      </div>
+    </div>
+
+	<div class="volume-controls">
+		<button onclick="decreaseVolume()">Diminuer Volume</button>
+		<button onclick="toggleMute()">Muter</button>
+		<button onclick="increaseVolume()">Augmenter Volume</button>
+	</div>
+
+  <!-- audio -->
+  <script>
+    var video = document.getElementById("bg-video");
+    
+    function decreaseVolume() {
+        if (video.volume > 0) {
+            video.volume -= 0.5
+        }
+    }
+    
+    function increaseVolume() {
+        if (video.volume < 1) {
+            video.volume += 0.5; 
+        }
+    }
+    
+    function toggleMute() {
+        video.muted = !video.muted;
+    }
+  </script>
+
+</body>
+</html>

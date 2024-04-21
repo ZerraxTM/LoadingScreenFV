@@ -1,0 +1,367 @@
+/*
+ _______                   __                  ________ 
+/       \                 /  |                /        |
+$$$$$$$  | __    __       $$ |        ______  $$$$$$$$/ 
+$$ |__$$ |/  |  /  |      $$ |       /      \     /$$/  
+$$    $$< $$ |  $$ |      $$ |      /$$$$$$  |   /$$/   
+$$$$$$$  |$$ |  $$ |      $$ |      $$    $$ |  /$$/    
+$$ |__$$ |$$ \__$$ |      $$ |_____ $$$$$$$$/  /$$/____ 
+$$    $$/ $$    $$ |      $$       |$$       |/$$      |
+$$$$$$$/   $$$$$$$ |      $$$$$$$$/  $$$$$$$/ $$$$$$$$/ 
+          /  \__$$ |                                    
+          $$    $$/                                     
+           $$$$$$/                                      
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/*Background RECTANGLE */
+#background {
+    position: absolute;
+    width: 439px;
+    height: 1120px;
+    left: -7px;
+    top: -28px;
+    overflow: visible;
+}
+#background_rect {
+    fill: rgba(0,0,0,0.4);
+    stroke: rgb(213, 220, 13);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.rectangle_background {
+    position: absolute;
+    overflow: visible;
+    width: 439px;
+    height: 1120px;
+    left: 0px;
+    top: 0px;
+}
+
+/* infos */
+#infos {
+    position: absolute;
+    width: 287px;
+    height: 192px;
+    left: 70px;
+    top: 375px;
+    overflow: visible;
+}
+#discordInfo {
+    position: absolute;
+    width: 287px;
+    height: 59px;
+    left: 545px;
+    top: 550px;
+    overflow: visible;
+}
+
+#group2 {
+    position: absolute;
+    width: 287px;
+    height: 59px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+ #discord_icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 24px;
+    top: 14px;
+    overflow: visible;
+}
+
+#discord_link {
+    left: 87px;
+    top: 21px;
+    position: absolute;
+    overflow: visible;
+    width: 141px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgb(240, 239, 238);
+}
+
+/* site web infos*/
+#websiteInfo {
+    position: absolute;
+    width: 287px;
+    height: 59px;
+    left: 950px;
+    top: 550px;
+    overflow: visible;
+}
+#group {
+    position: absolute;
+    width: 287px;
+    height: 59px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#info_rect {
+    opacity: 0.996;
+    fill: rgba(0, 0, 0, 0.478);
+    stroke: rgba(221, 221, 221, 0.302);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.rectangle_info {
+    filter: drop-shadow(0px 3px 13px rgba(13, 14, 6, 0.431));
+    position: absolute;
+    overflow: visible;
+    width: 326px;
+    height: 98px;
+    left: 0px;
+    top: 0px;
+}
+#website_link {
+    left: 82px;
+    top: 21px;
+    position: absolute;
+    overflow: visible;
+    width: 150px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(255,255,255,1);
+}
+
+/* update infos */
+#updateInfo {
+    position: absolute;
+    width: 300px;
+    height: 550px;
+    left: -5px;
+    top: 0px;
+    overflow: visible;
+}
+#update {
+    left: 65px;
+    top: 15px;
+    position: absolute;
+    overflow: visible;
+    width: 150px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+}
+#update_details {
+    left: 65px;
+    top: 45px;
+    position: absolute;
+    overflow: visible;
+    width: 150px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(255,255,255,1);
+}
+  
+/* web icon */
+#web_icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 975px;
+    top: 565px;
+    overflow: visible;
+}
+/* logo */
+#logo {
+    position: absolute;
+    width: 166px;
+    height: 166px;
+    left: 900px;
+    top: 50px;
+    overflow: visible;
+}
+
+/* video de fond */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+/* texte animation bouge */
+.centered-text {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -200px; 
+    left: 770px;
+}
+
+.game-load-text {
+    width: 22ch;
+    filter: drop-shadow(0px 3px 37px rgb(227, 220, 17));
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    left: 60px;
+    position: absolute;
+    overflow: visible;
+    width: 300px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    color: rgb(197, 191, 13);
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0px solid;
+    font-family: Poppins;
+    font-size: 2em;
+}
+
+/* volumes */
+.volume-controls {
+    position: absolute;
+    bottom: -100px;
+    left: 51%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.volume-controls button {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #e2e22b; 
+    border: 2px solid #0b0402; 
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.volume-controls button:hover {
+    background-color: #cac416; 
+    color: white;
+}
+
+.volume-controls button:active {
+    transform: translateY(2px);
+}
+
+.volume-controls button:focus {
+    outline: none;
+}
+
+/* keyframes pour l'animation de texte */
+@keyframes typing {
+    from {
+        width: 0 
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent 
+    }
+}
+
+/* animation loading */
+.loading-animation {
+    display: inline-block;
+    position: relative;
+    left: 160px; 
+    top: 1000px; 
+    width: 80px;
+    height: 80px;
+}
+
+.loading-animation div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loading-animation div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.loading-animation div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.loading-animation div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.loading-animation div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+/* keyframes pour l'animation de chargement */
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
